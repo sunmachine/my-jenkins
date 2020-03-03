@@ -1,6 +1,6 @@
 version: '3.2'
 
-# https://medium.com/@Joachim8675309/jenkins-environment-using-docker-6a12603ebf9
+# See README.md for details.
 
 services:  
   jenkins:
