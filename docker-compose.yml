@@ -1,0 +1,27 @@
+version: '3.2'
+
+# https://medium.com/@Joachim8675309/jenkins-environment-using-docker-6a12603ebf9
+
+services:  
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: my-jenkins
+    environment:
+      JENKINS_HOST_HOME: "/data/jenkins"
+    ports:
+        - 80:8080
+        - 443:8443
+        - 50000:50000
+    privileged: true
+    restart: always
+    user: root
+    volumes:
+    - type: volume
+      source: jenkins-data
+      target: /data/jenkins
+      volume:
+        nocopy: false
+
+volumes:
+  jenkins-data:
+    driver: local
