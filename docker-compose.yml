@@ -1,27 +1,30 @@
-version: '3.2'
+version: '3.7'
 
 # See README.md for details.
 
-services:  
+services:
+  # docker:
+  #   image: docker:latest
+  #   container_name: my-jenkins-docker
+
   jenkins:
-    image: jenkins/jenkins:lts
+    image: jenkins/jenkins:latest
     container_name: my-jenkins
     environment:
-      JENKINS_HOME: "/data/jenkins"
+      JENKINS_HOME: /data/jenkins
+      DOCKER_HOST: tcp://localhost:2375
     ports:
-        - 8080:8080
-        - 8443:8443
-        - 50000:50000
+        - "8080:8080"
+        - "8443:8443"
+        - "50000:50000"
     privileged: true
     restart: always
     user: root
     volumes:
-    - type: volume
-      source: jenkins-data
-      target: /data/jenkins
-      volume:
-        nocopy: false
+      - type: volume
+        source: jenkins-data
+        target: /data/jenkins
+      - "//var/run/docker.sock:/var/run/docker.sock"
 
 volumes:
   jenkins-data:
-    driver: local

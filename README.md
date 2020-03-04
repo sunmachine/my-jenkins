@@ -16,6 +16,8 @@ There are many Jenkins like this, but this one is mine.
 * [Old Medium Blogpost on setup][4]
 * [How to access a container's the shell][5]
 * [Administering Jenkins][6]
+* [Getting Docker into the container...][7]
+* [Sock binding][8]
 
 
 
@@ -25,3 +27,5 @@ There are many Jenkins like this, but this one is mine.
  [4]: https://medium.com/@Joachim8675309/jenkins-environment-using-docker-6a12603ebf9
  [5]: https://stackoverflow.com/questions/30172605/how-do-i-get-into-a-docker-containers-shell
  [6]: https://wiki.jenkins.io/display/JENKINS/Administering+Jenkins
+ [7]: https://getintodevops.com/blog/the-simple-way-to-run-docker-in-docker-for-ci
+ [8]: https://stackoverflow.com/questions/36765138/bind-to-docker-socket-on-windows
