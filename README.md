@@ -8,6 +8,8 @@ There are many Jenkins like this, but this one is mine.
 
 `docker exec -it <container-id> bash` to access the shell. (Not the same as SSH).
 
+Remember that `DOCKER_HOST: tcp://host.docker.internal:2375` must be set to access host network.
+
 ## References
 
 * [Something on StackOverflow][1]

@@ -15,7 +15,7 @@ services:
     container_name: my-jenkins
     environment:
       JENKINS_HOME: /data/jenkins
-      DOCKER_HOST: tcp://localhost:2375
+      DOCKER_HOST: tcp://host.docker.internal:2375
     ports:
         - 8080:8080
         - 8443:8443
